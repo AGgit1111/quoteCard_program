@@ -26,6 +26,17 @@ document.getElementById('imageUpload').addEventListener('change', function () {
     reader.readAsDataURL(file);
 });
 
+document.addEventListener('DOMContentLoaded', function () {
+    // Add event listener for Browse for Image button
+    document.getElementById('browseImageButton').addEventListener('click', function () {
+        document.getElementById('imageUpload').click();
+    });
+
+    // Add event listener for Generate Quote Card button
+    document.getElementById('generateCardButton').addEventListener('click', generateCard);
+});
+
+
 function generateCard() {
     const quote = document.getElementById('quote').value;
     const author = `- ${document.getElementById('author').value}`;
@@ -58,7 +69,7 @@ function generateCard() {
     }
 
     // Render the author's name below the quote in non-italics
-    ctx.font = '72px Roboto';
+    ctx.font = '50px Roboto';
     for (let i = 0; i < authorLines.length; i++) {
         ctx.fillText(authorLines[i], canvas.width / 2, startY + (quoteLines.length + i) * lineHeight);
     }

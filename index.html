@@ -1,28 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Quote Card Generator</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
-
 </head>
 
 <body>
-
     <div class="container">
-        <!--canvas uses styling in the html to maintain size on screen but create a higher quality image when saved-->
-        <canvas id="quoteCard" width="1200" height="1200" style="width: 400px; height: 400;"></canvas>
-        <input type="file" id="imageUpload" style="display:none;">
-        <button onclick="document.getElementById('imageUpload').click()">Browse for Image</button>
+        <canvas id="quoteCard" width="1200" height="1200"></canvas>
+        <input type="file" id="imageUpload">
+        <button id="browseImageButton">Browse for Image</button>
         <textarea id="quote" placeholder="Enter quote"></textarea>
         <input type="text" id="author" placeholder="Author's name">
-        <button onclick="generateCard()">Generate Quote Card</button>
+        <button id="generateCardButton">Generate Quote Card</button>
     </div>
-
     <script src="quoteCard.js"></script>
 </body>
 </html>
+
