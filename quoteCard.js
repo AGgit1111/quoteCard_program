@@ -17,7 +17,7 @@ document.getElementById('imageUpload').addEventListener('change', function () {
             ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
 
             // Dim the image
-            ctx.fillStyle = 'rgba(0, 0, 0, 0.6)';
+            ctx.fillStyle = 'rgba(0, 0, 0, 0.4)';
             ctx.fillRect(0, 0, canvas.width, canvas.height);
         }
         img.src = e.target.result;
