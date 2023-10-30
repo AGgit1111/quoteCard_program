@@ -69,7 +69,7 @@ function generateCard() {
     }
 
     // Render the author's name below the quote in non-italics
-    ctx.font = '50px Roboto';
+    ctx.font = '55px Roboto';
     for (let i = 0; i < authorLines.length; i++) {
         ctx.fillText(authorLines[i], canvas.width / 2, startY + (quoteLines.length + i) * lineHeight);
     }
