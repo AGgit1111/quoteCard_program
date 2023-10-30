@@ -38,7 +38,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 function generateCard() {
-    const quote = document.getElementById('quote').value;
+    const quote = `"${document.getElementById('quote').value}"`;
     const author = `- ${document.getElementById('author').value}`;
 
     // Reset canvas
