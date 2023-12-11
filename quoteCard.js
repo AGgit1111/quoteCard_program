@@ -40,6 +40,7 @@ document.addEventListener('DOMContentLoaded', function () {
 function generateCard() {
     const quote = `"${document.getElementById('quote').value}"`;
     const author = `- ${document.getElementById('author').value}`;
+    const webAddress = document.getElementById('webAddress').value;
 
     // Reset canvas
     const currentImage = ctx.getImageData(0, 0, canvas.width, canvas.height);
@@ -73,6 +74,11 @@ function generateCard() {
     for (let i = 0; i < authorLines.length; i++) {
         ctx.fillText(authorLines[i], canvas.width / 2, startY + (quoteLines.length + i) * lineHeight);
     }
+
+    // Render the web address at the bottom center of the canvas
+    ctx.font = '30px Roboto'; // Smaller font size for web address
+    ctx.fillStyle = 'gray'; // Gray color for web address
+    ctx.fillText(webAddress, canvas.width / 2, canvas.height - 50);
 }
 
 function getLines(context, text, maxWidth) {
